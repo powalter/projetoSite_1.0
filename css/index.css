@@ -1,0 +1,819 @@
+body {
+  background-color: #D7D7D6;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+  /* width: 400px; */
+}
+
+/* Cores */
+:root {
+  --color-light: #F8FAFC; /* BRANCO OU OUTRA COR NA MESMA TONALIDADE */
+  --color-dark: #101920; /* ESCURO */
+  --color-medium-dark: #263036; /* COR ESCURA LEVE */ /* ESCRITA E FUNDO */
+  --color-primary: #A2393A; /* VERMELHO */ /* COR DE DESTAQUE E BOTÕES */
+  --color-secondary: #21C063; /* WHATSAPP */
+}
+
+/* Estilo do Topo Cabeçalho */
+#headerTop, #headerMid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  height: 75px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+/* Estilo dos links no cabeçalho */
+#headerTop a, #headerMid a, #headerEnd a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+#headerTop a:visited, #headerMid a:visited, #headerEnd a:visited {
+  color: inherit;
+}
+
+/* Estilo Display Flex Center */
+.conteinerHeader, #boxBuscar, #headerEnd, #boxOffers, #carrosel, #barNews, #boxLogoSub, #boxEmail, .btn, #boxSocial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo do meio do cabeçalho */
+#headerMid {
+  height: 80px;
+  justify-content: center;
+  padding: 0 10px;
+  background-color: var(--color-medium-dark);
+}
+
+/* Estilo da barra de busca */
+#boxBuscar {
+  height: 65%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--color-dark);
+  box-shadow: 1px 1px 15px 5px black;
+}
+
+#boxBuscar input {
+  height: 100%;
+  width: 90%;
+  padding: 20px;
+  border: none;
+  font-size: 13pt;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+#boxBuscar button {
+  width: 10%;
+  color: var(--color-light);
+  background-color: transparent;
+  border: none;
+}
+
+#boxBuscar input::placeholder {
+  color: var(--color-light);
+  opacity: 50%;
+}
+
+#boxBuscar input:focus {
+  outline: none;
+  color: #f2f98f;
+}
+/* Estilo do final do cabeçalho */
+#headerEnd {
+  width: 100%;
+  height: 80px;
+  background-color: var(--color-medium-dark);
+}
+
+#headerEnd button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #A2393A;
+  color: var(--color-light);
+  border-radius: 5px;
+}
+
+#boxCategoria, #boxCarrinho {
+  margin: 0px 10px;
+  height: 65%;
+  width: 170%;
+  box-shadow: 1px 1px 15px 5px black;
+}
+
+/*******************************/
+
+/*ESTILO DO DROP MENU
+
+/*******************************/
+
+/* Estilos iniciais da div (fora da tela à esquerda) */
+.classeSubMenu {
+  width: 300px;
+  height: 1050px;
+  background-color: var(--color-light);
+  position: absolute;
+  left: -100%;  /* A div começa fora da tela à esquerda */
+  top: 0;
+  transition: left 0.5s ease;  /* Transição suave para a propriedade 'left' */
+  border-radius: 0px 0px 75px 0px;
+  z-index: 1001;
+  /* Aplicando o box-shadow com blur */
+  box-shadow: 
+    0 0 60px 30px rgba(0, 0, 0, 0.2),   /* Sombra com desfoque para dar profundidade */
+    0 0 100px 40px rgba(0, 0, 0, 0.15),   /* Sombra externa mais difusa */
+    0 0 150px 50px rgba(0, 0, 0, 0.1);    /* Sombra extra com mais difusão */
+}
+
+/* Classe que move a div para a posição desejada */
+.classeSubMenu.show {
+  left: 0px;  /* A div vai para a posição 50px da esquerda */
+}
+
+#subMenuCat .conteinerSubMenu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+}
+
+#subMenuCat .conteinerSubMenu i{
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#subMenuCat .conteinerSubMenu img{
+  width: 30px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+#subMenuCat .conteinerSubMenu a{
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+#subMenuCat .conteinerSubMenu a:hover{
+  color: #D7D7D6;
+}
+
+#subMenuCat .conteinerSubMenu a:active{
+  color: var(--color-light);
+}
+
+#subMenuCat #boxLogoSub{
+  width: 100%;
+  height: 150px;
+}
+
+#boxLogoSub #logo{
+  padding: 0;
+  width: 95%;
+  height: 95%;
+  margin: auto;
+  margin-top: 30px;
+
+}
+
+#boxLogoSub #logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#subMenuCat h1{
+  font-weight: bold;
+  font-size: 15pt;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+
+#subMenuCat h2{
+  font-size: 16px;
+  color: var(--color-dark);
+}
+
+#subMenuCat button{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  width: 50px;
+  height: 50%px;
+  padding: 10px;
+}
+
+#subMenuCat button:hover{
+  color: var(--color-dark);
+}
+
+
+.subMenuTest {
+  display: none; /* Inicialmente escondido */
+  opacity: 0; /* Começa invisível */
+  transform: translateY(-10px); /* Começa um pouco deslocado */
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary);
+  width: 100%;
+  left: 5px;
+  bottom: 5px;
+  transition: opacity 2s ease, transform 2s ease; left 2s ease, bottom 2s ease /* Transição suave de opacidade e movimento */
+}
+
+.subMenuTest.show {
+  display: block; /* Exibe o submenu */
+  opacity: 1; /* Deixa visível */
+  transform: translateY(0); /* Move para sua posição original */
+}
+
+.subMenuTest p {
+  margin-left: 15px;
+}
+
+/*******************************/
+
+/* Estilo do banner */
+
+/*******************************/
+
+#bannerTop{
+  background-color: var(--color-dark);
+  margin-top: 0px;
+}
+
+.boxCarousel {
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+  box-shadow: inset 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.bannerImgs{
+  position: relative;
+  width: 100%;
+}
+
+.bannerItem {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.bannerItem.active {
+  opacity: 1;
+  position: relative;
+}
+
+.bannerItem img{
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%
+}
+
+/* Estilo dos botões de navegação */
+.carouselControl {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--color-light);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  padding: 40px 13px;
+}
+
+.carouselControl.prev {
+    left: 1px;
+}
+
+.carouselControl.next {
+    right: 1px;
+}
+
+/*******************************/
+
+/*Inicio do Carrose*l/
+
+/*******************************/
+
+/* Estilo Cabeçalho Carrosel */
+#boxOffers{
+  padding-top: 30px;
+  font-size: 10pt;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Carrosel */
+#carrosel{
+  width: 100%;
+}
+
+/* Estilo das divisórias do banner */
+
+.boxDivisoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-light);
+}
+.divBanner {
+  display: flex;
+  padding: 10px 2px;
+  height: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+.conteinerDivisoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.conteinerDivisoria i{
+  display: flex;
+  justify-content: center;
+  font-size: 26pt;
+  padding-right: 13px;
+  color: var(--color-primary);
+}
+
+.tituloTxt {
+  font-size: 12pt;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.subTituloTxt{
+  font-size: 10pt;
+  color: var(--color-dark);
+}
+
+.txtDiv p{
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove as setas dos inputs tipo número */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Estilo das divs iconTemp */
+.iconTemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#topVendas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid silver;
+  background-color: var(--color-light);
+  font-size: 6pt;
+  color: var(--color-dark);
+}
+
+/*******************************/
+
+/* CARROSEL DOS PRODUTOS */
+
+/*******************************/
+
+/* Carrossel de Produtos */
+#productCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; /* Para manter a proporção com a redução */
+  background-color: var(--color-light);
+  gap: 10px; 
+  padding-bottom: 25px;
+}
+
+.productContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 380px;
+  width: 175px;
+  transition: box-shadow 0.5s ease; /* Suaviza o hover */
+  background-color: var(--color-light);
+  gap: 8.1px; 
+  position: relative; /* Necessário para posicionamento absoluto do botão */
+  border-radius: 5px;
+}
+
+.productContainer:hover {
+  box-shadow: 0px 0px 8.1px rgba(0, 0, 0, 0.5);
+}
+
+.productContainer img {
+  height: 168px;
+  width: 168px;
+}
+
+/* Título do Produto */
+#boxTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  text-align: center;
+}
+
+#boxTitle p {
+  font-size: 10pt;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Desconto */
+#discountBox {
+  height: 0px;
+  padding-top: 0px;
+  margin-top: 0px;
+  width: 77.05%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translate(0, 29.97px);
+}
+
+#discountValor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.43%;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  font-size: 7pt;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  transform: translate(-42%, -3%);
+}
+
+/* Botão Desconto */
+.btn {
+  display: none; /* Oculta o botão por padrão */
+  padding: 2.43%;
+  height: 28px;
+  width: 28px; 
+  border-radius: 50%;
+  font-size: 7pt;
+  border: none;
+  position: absolute;
+  transform: translate(118px, 2%);
+}
+
+.productContainer:hover .btn {
+  display: block; /* Exibe o botão ao passar o mouse sobre a div productContainer */
+}
+
+/*******************************************/
+
+#discountBox .btn img{
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Move a imagem para o centro */
+}
+
+#discountBox .btn:hover img{
+  background-color: silver;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  content: url('https://assets.onecompiler.app/42wu6ajnx/42xtaayub/favorite.png');
+}
+
+/* Preço */
+#boxPrice {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  text-align: center;
+  gap: 4.05px;
+}
+
+.conteinerPrice {
+  font-size: 8pt;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4.05px;
+}
+
+.conteinerPrice p {
+  margin: 0;
+}
+
+#priceDiscount {
+  text-decoration: line-through;
+  font-size: 8pt;
+  transform: translate(0%, 33%);
+}
+
+#priceReal {
+  font-size: 15pt;
+}
+
+.txtPrice {
+  font-weight: bold;
+}
+
+/* Compra */
+#boxBuy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80px;
+  width: 90%;
+}
+
+#boxAddCart {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+
+#conteinerNum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 80%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#btnBuy {
+  font-size: 10pt;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.05% 0%;
+  width: 59.13%;
+  height: 84%;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+#numberInput {
+  font-size: 10pt;
+  width: 24.3%;
+  text-align: center;
+  border: none;
+}
+
+.btnVlr {
+  border: none;
+  background-color: transparent;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Contato pelo Whatsapp */
+.btnContact {
+  font-size: 9pt;
+  height: 53%;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: transparent;
+}
+
+
+/*******************************/
+
+/* EMAIL */
+
+/*******************************/
+
+#barNews {
+  margin: 0;
+  padding: 15px 0px;
+  display: flex; /* flexbox para organizar em coluna */
+  flex-direction: column;
+  text-align: center;
+  height: 140px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+#barNews h1 {
+  font-size: 22px;
+  margin: 0; /* Remover todas as margens */
+  padding: 0; /* Remover padding */
+}
+
+#barNews p {
+  font-size: 16px;
+  margin: 15px 0px;
+  padding: 0; /* Remover padding */
+}
+
+#boxEmail{
+  justify-content: space-between;
+  height: 100px;
+  width: 80%;
+  border: 1px solid white;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: var(--color-light);
+}
+
+#boxEmail input, button{
+  height: 100%;
+}
+
+#boxEmail input{
+  font-size: 12pt;
+  width: 80%;
+  border: none;
+  padding-left: 20px;
+}
+
+#boxEmail input:focus{
+  outline: none;
+}
+
+#boxEmail button{
+  font-weight: bold;
+  width: 20%;
+  border: none;
+  background-color: transparent;
+}
+
+#boxEmail button:hover{
+  color: var(--color-primary);
+}
+
+/*******************************/
+
+/* Rodape */
+
+/*******************************/
+
+/* DISPLAY FLEX */
+#boxFooter, #boxSocial{
+  display: flex;
+  justify-content: center;
+}
+
+#boxFooter {
+  height: 80px;
+  width: 100%;
+}
+
+#boxSocial {
+  width: 100%;
+  background-color: var(--color-dark);
+  gap: 20px;
+}
+
+.iconSocial {
+  height: 50px;
+  width: 50px;
+  position: relative; /* Cria um contexto para o fundo */
+}
+
+.iconSocial .fundo_1 {
+  position: absolute; /* Coloca o fundo atrás da imagem */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 15px;
+  z-index: 1; /* Fundo atrás da imagem */
+  transition: box-shadow 1s ease;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 2);
+}
+
+.iconSocial .fundo_2 {
+  position: absolute; /* Coloca o fundo atrás da imagem */
+  height: 95%;
+  width: 95%;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 2; /* Fundo atrás da imagem */
+  transition: background-color 1s ease;
+}
+
+.iconSocial img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%; /* A imagem também ficará redonda */
+  z-index: 3; /* Imagem ficará à frente do fundo */
+}
+/* WHATSAPP */
+#iconWhats:hover .fundo_2{
+  background-color: #25D366;
+}
+#iconWhats:hover .fundo_1{
+  box-shadow: 0px 0px 15px rgba(37, 211, 102, 2);
+}
+
+/* FACEBOOK */
+#iconFace:hover .fundo_2{
+  background-color: #3B5998;
+}
+ #iconFace:hover .fundo_1{
+  box-shadow: 0px 0px 15px rgba(59, 89, 152, 2);
+}
+
+/* INSTAGRAM */
+#iconInsta:hover .fundo_2{
+  background-color: #E56969;
+}
+ #iconInsta:hover .fundo_1{
+  box-shadow: 0px 0px 15px rgba(229, 105, 105, 2);
+}
+
+/* LINKEDIN */
+#iconLink:hover .fundo_2{
+  background-color: #0077B5;
+}
+ #iconLink:hover .fundo_1{
+  box-shadow: 0px 0px 15px rgba(0, 119, 181, 2);
+}
+
+/* GITGUB */
+ #iconGit:hover .fundo_1{
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 2);
+}
+
+/* Copyright */
+
+#boxName{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+#boxName p{
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
