@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello, World!</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css"/>
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+</head>
+<body>
+  
+  <!-- Topo Cabeçalho -->
+  <div id="headerTop">
+    <div id="boxLogo">
+      <div class="iconTemp">
+        <img src="img/icons/logo.png" style="width: 150px; height: 150px; margin-top: 14px;">
+        <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/logo.png" style="width: 150px; height: 150px; margin-top: 14px;">-->
+      </div>
+    </div>
+    <div class="conteinerHeader" id="boxLogin">
+      <div class="iconTemp">
+        <img src="img/icons/acount.svg" style="margin-right: 5px"/>
+        <!--<i class="material-icons" style="margin-right: 5px">account_circle</i>-->
+      </div>
+      <p>Bem-Vindo(a)<br/><a href="#">Entrar</a> ou <a href="#">Cadastrar</a></p>
+    </div>
+  </div>
+  
+  <!-- Meio Cabeçalho -->
+  <div id="headerMid">
+    <div id="boxBuscar">
+      <input type="text" placeholder="Digite o que voce procura" />
+      <button type="submit">
+        <div class="iconTemp">
+          <img src="img/icons/search.svg" style="width: 30px; height: 30px; margin-right: 9px;"/>
+          <!--<i class="material-icons" style="margin-right: 9px">search</i>-->
+        </div>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Fim do Cabeçalho -->
+  
+  <!------------------------------------------------------------------------------------------------------------------------>   
+  
+  <!-- Drop Menu -->
+  
+  <!----------------------------------------------------------------------------------------------------------------------->   
+  
+  <div id="headerEnd">
+    <div id="boxCategoria">
+      <button class="dropMenuCat" id="btnCat" type="submit">
+        <div class="iconTemp">
+            <img src="img/icons/categoria.svg"/>
+            <!--<i class="material-icons">menu</i>-->
+          </div>
+          TODAS AS CATEGORIAS
+      </button>
+      
+      <div id="subMenuCat" class="classeSubMenu">
+        <div class="conteinerSubMenu" id="boxLogoSub">
+          <div id="logo">
+            <img src="img/icons/logo.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/logo.png" alt="" /> -->
+          </div>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        <div class="tituloSubMenu" id="">
+          <h1>CATEGORIAS</h1>
+        </div>
+        <!---------------------------------------------------------------------------------------------------------------->
+          
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="img/iconsDrop/ram.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/ram.png" alt="" /> -->
+            <h2>Hardware</h2>
+          </i>
+          <button class="btnTest" data-target="sub1">▽</button>
+          <div id="sub1" class="subMenuTest">
+            <a href="#"><p>Processadores</p></a>
+            <a href="#"><p>Placa Mãe</p></a>
+            <a href="#"><p>Memórias</p></a>
+            <a href="#"><p>Placa de Vídeo</p></a>
+            <a href="#"><p>Disco Rígido interno (HD)</p></a>
+            <a href="#"><p>SSD</p></a>
+            <a href="#"><p>Gabinete</p></a>
+            <a href="#"><p>Fonte</p></a>
+            <a href="#"><p>Cabos Extensores Sleeved</p></a>
+            <a href="#"><p>Coolers e Watercoolers</p></a>
+            <a href="#"><p>Ventoinhas e Casemod</p></a>
+            <a href="#"><p>Pasta Térmica e Refrigerantes</p></a>
+            <a href="#"><p>Placas de Som</p></a>
+            <a href="#"><p>Drive Óptico</p></a>
+            <a href="#"><p>Acessórios para Gabinete</p></a>
+            <br/>
+            <a href="#"><p>Ver Todos</p></a>
+          </div>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="img/iconsDrop/rato.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/rato.png" alt="" /> -->
+            <h2>Perifericos</h2>
+          </i>
+          <button class="btnTest" data-target="sub2">▽</button>
+          <div id="sub2" class="subMenuTest">
+            <a href="#"><p>Acessórios</p></a>
+            <a href="#"><p>Caixa de Som</p></a>
+            <a href="#"><p>Teclado</p></a>
+            <a href="#"><p>Fone de Ouvido</p></a>
+            <a href="#"><p>Microfones</p></a>
+            <a href="#"><p>Kit Teclado e Mouse</p></a>
+            <a href="#"><p>Kits Periféricos</p></a>
+            <a href="#"><p>Mouse</p></a>
+            <a href="#"><p>Mousepad</p></a>
+            <a href="#"><p>Cabos e Adaptadores</p></a>
+            <a href="#"><p>Impressoras</p></a>
+            <a href="#"><p>Armazenamento</p></a>
+            <a href="#"><p>Energia</p></a>
+            <a href="#"><p>Webcam</p></a>
+            <a href="#"><p>Pendrives</p></a>
+            <br/>
+            <a href="#"><p>Ver Todos</p></a>
+          </div>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="img/iconsDrop/eletronico.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/computador-portatil%20(1).png" alt="" /> -->
+            <h2>Computadores</h2>
+          </i>
+          <button class="btnTest" data-target="sub3">▽</button>
+          <div id="sub3" class="subMenuTest">
+            <a href="#"><p>Computadores Gamer</p></a>
+            <a href="#"><p>Computadores Workstation</p></a>
+            <a href="#"><p>Computadores Casa e Escritório</p></a>
+            <br/>
+            <a href="#"><p>Ver Todos</p></a>
+          </div>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="img/iconsDrop/placa-mae.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/placa-mae.png" alt="" /> -->
+            <a href="#"><h2>Kit Upgrade</h2></a>
+          </i>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="img/iconsDrop/monitor.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/monitor.png" alt="" /> -->
+            <h2>Monitores</h2>
+          </i>
+          <button class="btnTest" data-target="sub4">▽</button>
+          <div id="sub4" class="subMenuTest">
+            <a href="#"><p>Monitores Gamer</p></a>
+            <a href="#"><p>Monitor Casa e Escritório</p></a>
+            <a href="#"><p>Suporte Monitor / Tv</p></a>
+            <a href="#"><p>Acessórios para Monitor</p></a>
+            <br/>
+            <a href="#"><p>Ver Todos</p></a>
+          </div>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="img/iconsDrop/cadeira-gamer.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/cadeira-gamer.png" alt="" /> -->
+            <h2>Cadeiras Gamer</h2>
+          </i>
+          <button class="btnTest" data-target="sub5">▽</button>
+          <div id="sub5" class="subMenuTest">
+            <a href="#"><p>Cadeiras Gamer</p></a>
+            <a href="#"><p>Cadeiras Escritório</p></a>
+            <a href="#"><p>Mesas Gamer</p></a>
+            <a href="#"><p>Mesas Escritório</p></a>
+            <a href="#"><p>Gamer Station</p></a>
+            <a href="#"><p>Office Station</p></a>
+            <a href="#"><p>Acessórios para Cadeiras</p></a>
+            <br/>
+            <a href="#"><p>Ver Todos</p></a>
+          </div>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="img/iconsDrop/eletronico.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/eletronico.png" alt="" /> -->
+            <h2>Eletronicos</h2>
+          </i>
+          <button class="btnTest" data-target="sub6">▽</button>
+          <div id="sub6" class="subMenuTest">
+            <a href="#"><p>Consoles e Acessórios</p></a>
+            <a href="#"><p>Acessórios Mobile</p></a>
+            <a href="#"><p>Smartwatch</p></a>
+            <a href="#"><p>Smart Box</p></a>
+            <br/>
+            <a href="#"><p>Ver Todos</p></a>
+          </div>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="img/iconsDrop/computador-portatil.png" alt="" />
+            <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/computador-portatil.png" alt="" /> -->
+            <h2>Notebooks</h2>
+          </i>
+          <button class="btnTest" data-target="sub7">▽</button>
+          <div id="sub7" class="subMenuTest">
+            <a href="#"><p>Notebook Gamer</p></a>
+            <a href="#"><p>Notebooks</p></a>
+            <a href="#"><p>Refrigeração e Bases</p></a>
+            <a href="#"><p>Carregadores e Fontes</p></a>
+            <a href="#"><p>Tablets</p></a>
+            <br/>
+            <a href="#"><p>Ver Todos</p></a>
+          </div>
+        </div>
+        
+        <!---------------------------------------------------------------------------------------------------------------->
+        <div class="tituloSubMenu" id="">
+          <h1>AJUDA</h1>
+        </div>
+        <!---------------------------------------------------------------------------------------------------------------->
+        
+        <div class="conteinerSubMenu" id="">
+          <a href="#"><h2>Central de Atendimento</h2></a>
+        </div>
+        
+        <div class="conteinerSubMenu" id="">
+          <a href="#"><h2>Minha Conta</h2></a>
+        </div>
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/acompanhamento-de-pedidos.png" alt="" />
+            
+            <a href="#"><h2>Meus Pedidos</h2></a>
+          </i>
+          <button></button>
+        </div>
+        
+        <div class="conteinerSubMenu" id="">
+          <i>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/favorito.png" alt="" />
+            <a href="#"><h2>Favoritos</h2></a>
+          </i>
+        </div>
+        
+        <div class="conteinerSubMenu" id="">
+          <a href="#"><h2>Quem somos</h2></a>
+        </div>
+      </div>
+      
+    </div>
+    
+<!------------------------------------------------------------------------------------------------------------------------>   
+    
+    <div id="boxCarrinho">
+      <a href="#">
+        <button id="btnCart" type="submit">
+          <div class="iconTemp">
+            <img src="img/icons/shopCart.svg"/>
+            <!--<i class="material-icons">shopping_cart</i>-->
+          </div>
+          CARRINHO<br/>0 produto
+        </button>
+      </a>
+    </div>
+  </div>
+  
+  
+  <!------------------------------------------------------------------------------------------------------------------------> 
+  
+  <!-- Banner Topo -->
+  
+  <!------------------------------------------------------------------------------------------------------------------------>   
+  
+  <div id="bannerTop">
+    <!-- Conatainer do carrosel -->
+    <div class="boxCarousel">
+      <div class="bannerImgs">
+        <div class="bannerItem active">
+          <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42wu6ytp7/pc1.png" alt="Imagem 1">-->
+          <img src="img/banner/gamer.png" alt="Imagem 1">
+        </div>
+        <div class="bannerItem">
+          <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42wu6ytp7/pc2.png" alt="Imagem 2">-->
+          <img src="img/banner/COMPUTADOR BRAZIL PC_20241101_055922_0001.png" alt="Imagem 2">
+        </div>
+        <div class="bannerItem">
+          <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42wu6ytp7/pc3.png" alt="Imagem 3">-->
+          <img src="img/banner/COMPUTADOR BRAZIL PC_20241101_055922_0002.png" alt="Imagem 3">
+        </div>
+        <div class="bannerItem">
+          <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42wu6ytp7/pc4.png" alt="Imagem 4">-->
+          <img src="img/banner/COMPUTADOR BRAZIL PC_20241101_055922_0003.png" alt="Imagem 4" />
+        </div>
+      </div>
+    </div>
+    <!-- Botões de navegação
+      <button class="carouselControl prev" onclick="prevSlide()">&#10094;</button>
+      <button class="carouselControl next" onclick="nextSlide()">&#10095;</button> -->
+  </div>
+  
+  <!-- Divisoria Banner -->
+
+  <div class="boxDivisoria">
+    <div class="divBanner">
+      <div class="conteinerDivisoria">
+        <div class="iconTemp">
+          <img src="img/icons/transporte.svg" alt="" />
+          <!--<i class="material-icons">local_shipping</i>-->
+        </div>
+        <div class="txtDiv">
+          <p class="tituloTxt">FRETE GRATIS PARA BH</p>
+          <p class="subTituloTxt">compras acima de R$ 100,00</p>
+        </div>
+      </div>
+      
+      <div class="conteinerDivisoria">
+        <div class="iconTemp">
+          <img src="img/icons/credCard.svg" alt="" />
+          <!--<i class="material-icons">credit_card</i>-->
+        </div>
+        <div class="txtDiv">
+          <p class="tituloTxt">PARCELE SEM JUROS</p>
+          <p class="subTituloTxt">no cartao de credito</p>
+        </div>
+      </div>
+      
+      <div class="conteinerDivisoria">
+        <div class="iconTemp">
+          <img src="img/icons/24h.svg" alt="" />
+          <!--<i class="material-icons">redeem</i>-->
+        </div>
+        <div class="txtDiv">
+          <p class="tituloTxt">COMPRE ONLINE</p>
+          <p class="subTituloTxt">retire na loja - BH|Regiao</p>
+        </div>
+      </div>
+      
+      <div class="conteinerDivisoria">
+        <div class="iconTemp">
+          <img src="img/icons/compraSegura.svg" alt="" />
+          <!--<i class="material-icons">verified_user</i>-->
+        </div>
+        <div class="txtDiv">
+          <p class="tituloTxt">COMPRA SEGURA</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Carrosel -->
+  <div id="boxOffers">
+    <h1>Mais Vendidos</h1>
+  </div>
+  
+  <!-- Carrosel -->
+  <div id="carrosel">
+    
+    <!-- Produto Carrosel -->
+    <div id="productCarousel">
+      <div class="productContainer">
+        <div id="discountBox">
+          <div id="discountValor">
+            <p>10% OFF</p>
+          </div>
+          <button class="btn" type="submit">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/favorite_b.png" alt="" />
+          </button>
+        </div>
+        <img src="img/product/pc1.jpg" alt="" />
+        <div id="boxTitle">
+          <p>COMPUTADOR GAMER INTEL</p>
+        </div>
+        <div id="boxPrice">
+          <div class="conteinerPrice">
+            <p id="priceDiscount">R$ 4.134</p>
+            <p id="priceReal">R$ 3.759,00</p>
+          </div>
+          <div class="conteinerPrice">
+            <p>ate <p class="txtPrice" id="parcela">4x</p> de <p class="txtPrice" id="parcelado">R$ 939,75</p> sem juros.</p>
+          </div>
+        </div>
+        <div id="boxBuy">
+          <div id="boxAddCart">
+            <div id="conteinerNum">
+              <button class="btnVlr" onclick="decreaseValue()">-</button>
+              <input type="number" id="numberInput" value="1" min="1" max="10" />
+              <button class="btnVlr" onclick="increaseValue()">+</button>
+            </div>
+            <button id="btnBuy" type="submit">Adicionar</button>
+          </div>
+          <button class="btnContact" type="submit">
+            Comprar pelo Whatsapp
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Produto Carrosel -->
+    <div id="productCarousel">
+      <div class="productContainer">
+        <div id="discountBox">
+          <div id="discountValor">
+            <p>10% OFF</p>
+          </div>
+          <button class="btn" type="submit">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/favorite_b.png" alt="" />
+          </button>
+        </div>
+          <img src="img/product/pc2.jpg"/>
+        <div id="boxTitle">
+          <p>RETRATO MINIATURA DO MATABUT</p>
+        </div>
+        <div id="boxPrice">
+          <div class="conteinerPrice">
+            <p id="priceDiscount">R$ 768,90</p>
+            <p id="priceReal">R$ 699,00</p>
+          </div>
+          <div class="conteinerPrice">
+            <p>ate <p class="txtPrice" id="parcela">4x</p> de <p class="txtPrice" id="parcelado">R$ 174,75</p> sem juros.</p>
+          </div>
+        </div>
+        <div id="boxBuy">
+          <div id="boxAddCart">
+            <div id="conteinerNum">
+              <button class="btnVlr" onclick="decreaseValue()">-</button>
+              <input type="number" id="numberInput" value="1" min="1" max="10" />
+              <button class="btnVlr" onclick="increaseValue()">+</button>
+            </div>
+            <button id="btnBuy" type="submit">Adicionar</button>
+          </div>
+          <button class="btnContact" type="submit">
+            Comprar pelo Whatsapp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cabeçalho Carrosel -->
+  <div id="boxOffers">
+    <h1>Lancamentos</h1>
+  </div>
+  
+  <!-- Carrosel -->
+  <div id="carrosel">
+    
+    <!-- Produto Carrosel -->
+    <div id="productCarousel">
+      <div class="productContainer">
+        <div id="discountBox">
+          <div id="discountValor">
+            <p>10% OFF</p>
+          </div>
+          <button class="btn" type="submit">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/favorite_b.png" alt="" />
+          </button>
+        </div>
+        <img src="img/product/pc1.jpg" alt="" />
+        <div id="boxTitle">
+          <p>COMPUTADOR GAMER INTEL</p>
+        </div>
+        <div id="boxPrice">
+          <div class="conteinerPrice">
+            <p id="priceDiscount">R$ 4.134</p>
+            <p id="priceReal">R$ 3.759,00</p>
+          </div>
+          <div class="conteinerPrice">
+            <p>ate <p class="txtPrice" id="parcela">4x</p> de <p class="txtPrice" id="parcelado">R$ 939,75</p> sem juros.</p>
+          </div>
+        </div>
+        <div id="boxBuy">
+          <div id="boxAddCart">
+            <div id="conteinerNum">
+              <button class="btnVlr" onclick="decreaseValue()">-</button>
+              <input type="number" id="numberInput" value="1" min="1" max="10" />
+              <button class="btnVlr" onclick="increaseValue()">+</button>
+            </div>
+            <button id="btnBuy" type="submit">Adicionar</button>
+          </div>
+          <button class="btnContact" type="submit">
+            Comprar pelo Whatsapp
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Produto Carrosel -->
+    <div id="productCarousel">
+      <div class="productContainer">
+        <div id="discountBox">
+          <div id="discountValor">
+            <p>10% OFF</p>
+          </div>
+          <button class="btn" type="submit">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/favorite_b.png" alt="" />
+          </button>
+        </div>
+          <img src="img/product/pc2.jpg"/>
+        <div id="boxTitle">
+          <p>RETRATO MINIATURA DO MATABUT</p>
+        </div>
+        <div id="boxPrice">
+          <div class="conteinerPrice">
+            <p id="priceDiscount">R$ 768,90</p>
+            <p id="priceReal">R$ 699,00</p>
+          </div>
+          <div class="conteinerPrice">
+            <p>ate <p class="txtPrice" id="parcela">4x</p> de <p class="txtPrice" id="parcelado">R$ 174,75</p> sem juros.</p>
+          </div>
+        </div>
+        <div id="boxBuy">
+          <div id="boxAddCart">
+            <div id="conteinerNum">
+              <button class="btnVlr" onclick="decreaseValue()">-</button>
+              <input type="number" id="numberInput" value="1" min="1" max="10" />
+              <button class="btnVlr" onclick="increaseValue()">+</button>
+            </div>
+            <button id="btnBuy" type="submit">Adicionar</button>
+          </div>
+          <button class="btnContact" type="submit">
+            Comprar pelo Whatsapp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="barNews">
+    <h1>Receba nossas ofertas por e-mail</h1>
+    <p>Cadastre seu e-mail e receba novidades e promoções exclusivas em primeira mao!</p>
+    <div id="boxEmail">
+      <input type="email"placeholder="Digite seu email"/>
+      <button type="submit">⟩</button>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------------> 
+  
+  <!-- Rodape -->
+  
+  <!------------------------------------------------------------------------------------------------------------------------> 
+  
+  <div id="boxFooter">
+      <div id="boxSocial">
+        
+        <div id="iconWhats" class="iconSocial">
+          <img src="img/iconsSocial/whatsapp.png" alt="" />
+          <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/whatsapp.png" alt="Ícone Social" /> -->
+          <div class="fundo_1"></div>
+          <div class="fundo_2"></div>
+        </div>
+        
+        <div id="iconFace" class="iconSocial">
+          <img src="img/iconsSocial/facebook.png" alt="" />
+          <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/facebook.png" alt="Ícone Social" /> -->
+          <div class="fundo_1"></div>
+          <div class="fundo_2"></div>
+        </div>
+        
+        <div id="iconInsta" class="iconSocial">
+          <img src="img/iconsSocial/instagram.png" alt="" />
+          <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/instagram.png" alt="Ícone Social" /> -->
+          <div class="fundo_1"></div>
+          <div class="fundo_2"></div>
+        </div>
+        
+        <div id="iconLink" class="iconSocial">
+          <img src="img/iconsSocial/linkedin.png" alt="" />
+          <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/linkedin.png" alt="Ícone Social" /> -->
+          <div class="fundo_1"></div>
+          <div class="fundo_2"></div>
+        </div>
+        
+        <div id="iconGit" class="iconSocial">
+          <img src="img/iconsSocial/github.1024x998.png" alt="" />
+          <!-- <img src="https://assets.onecompiler.app/42wu6ajnx/42xzj23nr/github.1024x998.png" alt="Ícone Social" /> -->
+          <div class="fundo_1"></div>
+          <div class="fundo_2"></div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    
+    
+  </div>
+  <div id="boxName">
+    <p>Copyright © 2024 WM Stock | Desenvolvido por @WalterDev</p>
+  </div>
+
+  <script src="indexScript.js"></script>
+</body>
+</html><!DOCTYPE html>
